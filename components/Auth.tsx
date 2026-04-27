@@ -6,7 +6,7 @@ import * as Linking from "expo-linking";
 import { supabase } from "../utils/supabase";
 
 WebBrowser.maybeCompleteAuthSession(); // required for web only
-const redirectTo = makeRedirectUri({useProxy: true,});
+const redirectTo = makeRedirectUri();
 
 const createSessionFromUrl = async (url: string) => {
   const { params, errorCode } = QueryParams.getQueryParams(url);
